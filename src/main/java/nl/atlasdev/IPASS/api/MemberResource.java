@@ -2,6 +2,7 @@ package nl.atlasdev.IPASS.api;
 
 import java.sql.SQLException;
 
+import javax.annotation.security.RolesAllowed;
 import javax.json.Json;
 import javax.json.JsonArrayBuilder;
 import javax.ws.rs.GET;
@@ -15,6 +16,7 @@ import nl.atlasdev.IPASS.model.Member;
 @Path("/member")
 public class MemberResource {
 	@GET
+	@RolesAllowed({"D", "T", "I"})
 	@Produces("application/json")
 	public Response getUsers() throws SQLException {
 		MemberDAO dao = new MemberDAO();

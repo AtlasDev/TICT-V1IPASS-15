@@ -34,6 +34,7 @@ public class ReportResource {
 
 	@GET
 	@Path("/{report}")
+	@RolesAllowed({"D", "T", "I"})
 	@Produces("application/json")
 	public Response getReport(
 		@PathParam("report") int reportId

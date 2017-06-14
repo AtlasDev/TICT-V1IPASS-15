@@ -74,7 +74,7 @@ public class Report {
 
 	@Override
 	public String toString() {
-		return "Report #"+this.id;
+		return "Report #" + this.id;
 	}
 
 	@Override

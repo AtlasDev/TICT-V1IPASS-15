@@ -23,7 +23,7 @@ public class AuthFilter implements ContainerRequestFilter {
 	@Override
 	public void filter(ContainerRequestContext requestCtx) throws IOException {
 		boolean isSecure = requestCtx.getSecurityContext().isSecure();
-		Context msc = new Context("Unknown", "guest", isSecure);
+		Context msc = new Context("unknown@domain.com", "G", isSecure);
 		String authHeader = requestCtx.getHeaderString(HttpHeaders.AUTHORIZATION);
 		if (authHeader != null && authHeader.startsWith("Bearer ")) {
 			String token = authHeader.substring("Bearer".length()).trim();
