@@ -1,0 +1,51 @@
+aside {
+  height: 100vh;
+}
+
+.header {
+	background-color: #ffa000;
+}
+
+.header-content {
+  flex-direction: column-reverse;
+  align-items: flex-start;
+}
+
+img {
+  height: 80px;
+  border-radius: 1000px;
+  margin-bottom: 1vh;
+}
+
+.title {
+  font-size: larger;
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+.actions {
+	right: 7px;
+  bottom: 20px;
+  position: absolute;
+}
+
+.actions i {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.drawerMenu {
+  left: auto !important;
+  right: 0 !important;
+  transform-origin: right top 0px !important;
+}
+
+.mdc-temporary-drawer--selected {
+	color: #b34d00 !important;
+}
+
+.mdc-temporary-drawer--selected.mdc-list-item .mdc-list-item__start-detail {
+	color: #b34d00 !important;
+}

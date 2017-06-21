@@ -9,6 +9,7 @@ import javax.json.JsonArrayBuilder;
 import javax.json.JsonObjectBuilder;
 
 import nl.atlasdev.IPASS.builder.ReportBuilder;
+import nl.atlasdev.IPASS.dao.AnswerDAO;
 import nl.atlasdev.IPASS.dao.MemberDAO;
 
 public class Report {
@@ -39,9 +40,12 @@ public class Report {
 	}
 
 	public void populate() throws SQLException {
-		MemberDAO userDAO = new MemberDAO();
-		if(this.creator == null) this.creator = userDAO.findById(this.creatorId);
-		if(this.target == null) this.target = userDAO.findById(this.targetId);
+		MemberDAO memberDAO = new MemberDAO();
+		if(this.creator == null) this.creator = memberDAO.findById(this.creatorId);
+		if(this.target == null) this.target = memberDAO.findById(this.targetId);
+
+		AnswerDAO answerDAO = new AnswerDAO();
+		if(this.answers == null) this.answers = answerDAO.findByReport(this.id);
 	}
 
 	public JsonObjectBuilder exportJSON() {

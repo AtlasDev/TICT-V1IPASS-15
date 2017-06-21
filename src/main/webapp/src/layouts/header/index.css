@@ -1,0 +1,12 @@
+header, button {
+  background-color: #ff6f00 !important;
+  color: #000 !important;
+}
+
+.menuButton {
+  cursor: pointer;
+}
+
+.mdc-linear-progress__bar-inner {
+  background-color: #ffa000;
+}

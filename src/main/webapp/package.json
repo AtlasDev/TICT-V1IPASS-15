@@ -1,0 +1,53 @@
+{
+  "name": "leraarvolgsysteem",
+  "version": "0.1.0",
+  "description": "Leraar volg systeem voor het IPASS.",
+  "main": "index.html",
+  "author": "Dany Sluijk <dany@atlasdev.nl> (https://atlasdev.nl)",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --host 0.0.0.0 --port 3000 --history-api-fallback --content-base ./",
+    "test": "tslint --project tsconfig.json --fix \"src/**/*.ts\" -t codeFrame"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.4.5",
+    "@types/jwt-decode": "^2.2.0",
+    "@types/node": "^7.0.29",
+    "@types/vue-router": "^2.0.0",
+    "css-loader": "^0.28.3",
+    "file-loader": "^0.11.1",
+    "image-webpack-loader": "^3.3.1",
+    "ts-loader": "^2.0.3",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.2",
+    "vue-loader": "^12.0.4",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.3",
+    "vue-typescript-import-dts": "^3.1.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "@material/button": "^0.3.7",
+    "@material/card": "^0.2.3",
+    "@material/dialog": "^0.3.1",
+    "@material/drawer": "^0.5.0",
+    "@material/layout-grid": "^0.2.0",
+    "@material/linear-progress": "^0.1.2",
+    "@material/list": "^0.2.10",
+    "@material/menu": "^0.3.0",
+    "@material/textfield": "^0.2.11",
+    "@material/toolbar": "^0.4.0",
+    "@types/vue-resource": "^0.9.31",
+    "chart.js": "^2.6.0",
+    "jwt-decode": "^2.2.0",
+    "vue": "^2.3.3",
+    "vue-class-component": "^5.0.1",
+    "vue-resource": "^1.3.4",
+    "vue-router": "^2.5.3",
+    "vuex": "^2.3.1",
+    "vuex-persistedstate": "^1.4.1"
+  }
+}

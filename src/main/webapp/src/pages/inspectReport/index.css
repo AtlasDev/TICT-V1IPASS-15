@@ -1,0 +1,35 @@
+.card {
+	flex-direction: column-reverse;
+}
+
+table {
+	width: 100%;
+	display: block;
+	overflow-x: auto;
+}
+
+.table-header {
+	text-align: left;
+	font-size: 110%;
+}
+
+.mdc-card__supporting-text {
+	padding: 0 5px 10px 5px;
+}
+
+th {
+	min-width: 12vw;
+}
+
+td {
+	padding-right: 20px;
+}
+
+.metaDisplay {
+	list-style: none;
+	padding: 0 10px;
+}
+
+.metaDisplay span {
+	font-weight: bold;
+}

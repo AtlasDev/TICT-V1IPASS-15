@@ -33,4 +33,12 @@ public class ReportDAO extends BaseDAO {
 			.setUpdateDate(result.getTimestamp("updatedAt"))
 			.setComment(result.getString("comment"));
 	}
+
+	public int findAndDelete(int reportId) throws SQLException {
+		AnswerDAO answerDAO = new AnswerDAO();
+		if(answerDAO.findByReportAndDelete(reportId) == 0) return 0;
+		PreparedStatement stat = super.getConnection().prepareStatement("delete from report where id = ?");
+		stat.setInt(1, reportId);
+		return stat.executeUpdate();
+	}
 }

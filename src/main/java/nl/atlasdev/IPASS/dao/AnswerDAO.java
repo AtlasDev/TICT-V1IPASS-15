@@ -20,9 +20,15 @@ public class AnswerDAO extends BaseDAO {
 
 	private AnswerBuilder createBuilder(ResultSet result) throws SQLException {
 		return new AnswerBuilder(result.getInt("id"))
-		.setReportId(result.getInt("report"))
-		.setIndicator(result.getString("indicator"))
-		.setRating(result.getBoolean("rating"))
-		.setComment(result.getString("comment"));
+			.setReportId(result.getInt("report"))
+			.setIndicator(result.getString("indicator"))
+			.setRating(result.getBoolean("rating"))
+			.setComment(result.getString("comment"));
+	}
+
+	public int findByReportAndDelete(int reportId) throws SQLException {
+		PreparedStatement stat = super.getConnection().prepareStatement("delete from answer where report = ?");
+		stat.setInt(1, reportId);
+		return stat.executeUpdate();
 	}
 }

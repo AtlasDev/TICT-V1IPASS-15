@@ -1,0 +1,18 @@
+table {
+	width: 100%;
+	display: block;
+	overflow-x: auto;
+}
+
+.table-header {
+	text-align: left;
+	font-size: 110%;
+}
+
+th {
+	min-width: 12vw;
+}
+
+.link {
+	width: 20px;
+}

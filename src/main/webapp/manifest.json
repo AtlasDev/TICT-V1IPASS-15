@@ -1,0 +1,15 @@
+{
+	"name": "Leraar volgsysteem",
+	"short_name": "Volgsysteem",
+	"start_url": ".",
+	"version": "0.1.0",
+	"display": "standalone",
+	"background_color": "#e66300",
+	"theme_color": "#e66300",
+	"description": "Leraar volg systeem voor het IPASS.",
+	"icons": [{
+		"src": "/static/logo-512.png",
+		"sizes": "512x512",
+		"type": "image/png"
+	}]
+}
