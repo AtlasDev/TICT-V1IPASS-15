@@ -11,34 +11,34 @@ import staff from './pages/staff/index.vue';
 export const routes: RouteConfig[] = [{
 	path: '/',
 	name: 'Dashboard',
-	component: home,
+	component: (h) => h(home),
 }, {
 	path: '/login',
 	name: 'Login',
-	component: login,
+	component: (h) => h(login),
 }, {
 	path: '/indicators',
 	name: 'Indicatoren',
-	component: indicators,
+	component: (h) => h(indicators),
 }, {
 	path: '/report/:reportId',
 	name: 'Bekijken Raport',
-	component: inspectReport,
+	component: (h) => h(inspectReport),
 }, {
 	path: '/reports',
 	name: 'Rapporten',
-	component: reports,
+	component: (h) => h(reports),
 	children: [{
 		path: ':employee',
 		name: 'Personeel Rapport',
-		component: reports,
+		component: (h) => h(reports),
 	}],
 }, {
 	path: '/staff',
 	name: 'Personeel',
-	component: staff,
+	component: (h) => h(staff),
 }, {
 	path: '*',
 	name: '404 Not Found',
-	component: notFound,
+	component: (h) => h(notFound),
 }];

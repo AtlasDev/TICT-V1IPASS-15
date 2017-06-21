@@ -2,26 +2,26 @@
 	<div>
 		<div class="mdc-layout-grid__cell--span-6 mdc-card card">
 		  <section class="mdc-card__supporting-text">
-				<ul class="metaDisplay">
-					<li>
+				<ul class="metaDisplay mdc-list">
+					<li class="mdc-list-item">
 						<span>ID:</span> #{{ report.id }}
 					</li>
-					<li>
+					<li class="mdc-list-item">
 						<span>Naam</span>: {{ report.target.firstName }} {{ report.target.lastName }}
 					</li>
-					<li>
+					<li class="mdc-list-item">
 						<span>Kijker</span>: {{ report.creator.firstName }} {{ report.creator.lastName }}
 					</li>
-					<li>
+					<li class="mdc-list-item">
 						<span>Aangemaakt</span>: {{ timeAgo(new Date(report.createdAt)) }} geleden
 					</li>
-					<li>
+					<li class="mdc-list-item">
 						<span>Laatst aangepast</span>: {{ timeAgo(new Date(report.updatedAt)) }} geleden
 					</li>
-					<li>
+					<li class="mdc-list-item">
 						<span>Indicatoren</span>: {{ report.answers.length }} / {{ $store.state.unStrucIndicators.length }}
 					</li>
-					<li>
+					<li class="mdc-list-item">
 						<span>Commentaar</span>: {{ report.comment }}
 					</li>
 				</ul>
@@ -32,14 +32,19 @@
 		</div>
 		<div class="mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-12-phone mdc-card card">
 			<section class="mdc-card__supporting-text">
-				<canvas id="inspectReportChart" width="400" height="400"></canvas>
+				<canvas id="inspectReportRatioChart" width="400" height="400"></canvas>
 			</section>
 			<section class="mdc-card__primary">
 		    <h1 class="mdc-card__title mdc-card__title--large">Goedkeuring vragen</h1>
 		  </section>
 		</div>
-		<div class="mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-12-phone mdc-card">
-			2
+		<div class="mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-12-phone mdc-card card">
+			<section class="mdc-card__supporting-text">
+				<canvas id="inspectReportBarChart" width="400" height="400"></canvas>
+			</section>
+			<section class="mdc-card__primary">
+		    <h1 class="mdc-card__title mdc-card__title--large">Goedkeuring vragen per sectie</h1>
+		  </section>
 		</div>
 		<div class="mdc-layout-grid__cell--span-12 mdc-list-group mdc-card">
 			<section class="mdc-card__primary">

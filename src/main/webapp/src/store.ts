@@ -21,8 +21,7 @@ export default new Vuex.Store({
       expireDate: null,
     },
 		api: {
-			// basePath: 'http://192.168.2.9:8080/IPASS/api',
-			basePath: 'http://xpsday.wifi.hu.nl:8080/IPASS/api',
+			basePath: 'http://localhost:8080/IPASS/api',
 		},
     staff: [ ],
     unStrucIndicators: [ ],
