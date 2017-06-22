@@ -2,15 +2,18 @@ package nl.atlasdev.IPASS.dao;
 
 import java.net.URI;
 import java.sql.Connection;
+import java.sql.SQLException;
+
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 
 public class BaseDAO {
-	private DataSource connectionPool;
+	private static DataSource connectionPool;
 
 	public BaseDAO() {
+		if (BaseDAO.connectionPool != null) return;
 		try {
 			final String DATABASE_URL_PROP = System.getenv("DATABASE_URL");
 			if (DATABASE_URL_PROP != null) {
@@ -34,7 +37,8 @@ public class BaseDAO {
 		}
 	}
 
-	protected final Connection getConnection() {
+	protected final Connection getConnection() throws SQLException {
+		if (BaseDAO.connectionPool != null) return BaseDAO.connectionPool.getConnection();
 		try {
 			return connectionPool.getConnection();
 		} catch (Exception ex) {
