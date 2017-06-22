@@ -21,7 +21,7 @@ export default new Vuex.Store({
       expireDate: null,
     },
 		api: {
-			basePath: 'http://localhost:8080/IPASS/api',
+			basePath: '/api',
 		},
     staff: [ ],
     unStrucIndicators: [ ],
