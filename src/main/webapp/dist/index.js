@@ -24848,7 +24848,7 @@ exports.default = new vuex_1.default.Store({
             expireDate: null,
         },
         api: {
-            basePath: 'http://localhost:8080/IPASS/api',
+            basePath: '/api',
         },
         staff: [],
         unStrucIndicators: [],
