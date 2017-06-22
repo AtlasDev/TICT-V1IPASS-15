@@ -1,5 +1,6 @@
 package nl.atlasdev.IPASS.dao;
 
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -40,5 +41,28 @@ public class ReportDAO extends BaseDAO {
 		PreparedStatement stat = super.getConnection().prepareStatement("delete from report where id = ?");
 		stat.setInt(1, reportId);
 		return stat.executeUpdate();
+	}
+
+	public boolean insert(Report report) throws SQLException {
+		PreparedStatement stat = super.getConnection().prepareStatement("insert into report (creator, target, createdAt, updatedAt, comment) values (?, ?, ?, ?, ?)");
+		stat.setInt(1, report.getCreatorId());
+		stat.setInt(2, report.getTargetId());
+		stat.setDate(3, new Date(report.getCreatedAt().getTime()));
+		stat.setDate(4, new Date(report.getUpdatedAt().getTime()));
+		stat.setString(5, report.getComment());
+		int result = stat.executeUpdate();
+		return result == 0;
+	}
+
+	public Report findByReport(Report report) throws SQLException {
+		PreparedStatement stat = super.getConnection().prepareStatement("select * from report where createdAt = ? and updatedAt = ? and creator = ? and target = ? and comment = ?");
+		stat.setDate(1, new Date(report.getCreatedAt().getTime()));
+		stat.setDate(2, new Date(report.getUpdatedAt().getTime()));
+		stat.setInt(3, report.getCreatorId());
+		stat.setInt(4, report.getTargetId());
+		stat.setString(5, report.getComment());
+		ResultSet result = stat.executeQuery();
+		if(!result.next()) return null;
+		return new Report(this.createBuilder(result));
 	}
 }

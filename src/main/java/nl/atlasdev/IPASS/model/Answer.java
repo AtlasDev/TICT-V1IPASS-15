@@ -1,5 +1,7 @@
 package nl.atlasdev.IPASS.model;
 
+import java.sql.Date;
+
 import javax.json.Json;
 import javax.json.JsonObjectBuilder;
 
@@ -20,6 +22,18 @@ public class Answer {
 		this.indicator = builder.indicator;
 		this.rating = builder.rating;
 		this.comment = builder.comment;
+	}
+
+	public int getReportId() {
+		return this.reportId;
+	}
+
+	public boolean getRating() {
+		return this.rating;
+	}
+
+	public String getIndicator() {
+		return this.indicator;
 	}
 
 	public JsonObjectBuilder exportJSON() {

@@ -1,5 +1,6 @@
 import { RouteConfig } from 'vue-router';
 
+import addReport from './pages/addReport/index.vue';
 import home from './pages/home/index.vue';
 import indicators from './pages/indicators/index.vue';
 import inspectReport from './pages/inspectReport/index.vue';
@@ -20,6 +21,10 @@ export const routes: RouteConfig[] = [{
 	path: '/indicators',
 	name: 'Indicatoren',
 	component: (h) => h(indicators),
+}, {
+	path: '/report/add',
+	name: 'Maak Raport',
+	component: (h) => h(addReport),
 }, {
 	path: '/report/:reportId',
 	name: 'Bekijken Raport',

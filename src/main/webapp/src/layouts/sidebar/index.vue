@@ -60,13 +60,13 @@
         <hr class="mdc-list-divider">
 
         <div class="mdc-list">
-          <a class="mdc-list-item" target="_blank" href="https://opensource.org/licenses/MIT">
+          <a class="mdc-list-item" target="_blank" rel="noopener" href="https://opensource.org/licenses/MIT">
             <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">description</i>MIT License
           </a>
-          <a class="mdc-list-item" target="_blank" href="https://github.com/AtlasDev/TICT-V1IPASS-15">
+          <a class="mdc-list-item" target="_blank" rel="noopener" href="https://github.com/AtlasDev/TICT-V1IPASS-15">
             <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">code</i>GitHub
           </a>
-          <a class="mdc-list-item" target="_blank" href="https://atlasdev.nl">
+          <a class="mdc-list-item" target="_blank" rel="noopener" href="https://atlasdev.nl">
             <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">cloud</i>Website
           </a>
         </div>

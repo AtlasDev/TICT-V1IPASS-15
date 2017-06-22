@@ -10,6 +10,8 @@ public class AnswerBuilder {
 	public boolean rating;
 	public String comment;
 
+	public AnswerBuilder() { }
+
 	public AnswerBuilder(int id) {
 		this.id = id;
 	}

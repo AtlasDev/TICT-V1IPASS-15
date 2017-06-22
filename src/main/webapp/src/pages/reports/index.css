@@ -16,3 +16,9 @@ th {
 .link {
 	width: 20px;
 }
+
+.float-bottom {
+	position: absolute;
+	right: 40px;
+	bottom: 30px;
+}

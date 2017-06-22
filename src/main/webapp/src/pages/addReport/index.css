@@ -1,0 +1,40 @@
+.right {
+	right: 20px;
+	left: 0;
+}
+
+.submit {
+	background-color: #ffa000;
+}
+
+.item {
+	padding-left: 3%;
+}
+
+.mdc-radio__background::before {
+	background-color: #ffa000;
+}
+
+.mdc-radio__inner-circle {
+	color: #ffa000;
+}
+
+.mdc-radio__native-control:checked + .mdc-radio__background .mdc-radio__inner-circle {
+	background-color: #ffa000;
+}
+
+.mdc-radio__native-control:checked + .mdc-radio__background .mdc-radio__outer-circle, .mdc-radio__outer-circle {
+	border-color: #ffa000;
+}
+
+.mdc-radio::before {
+	background-color: rgba(255, 160, 0, 0.3);
+}
+
+.employeeSelect {
+	width: 100% !important;
+}
+
+.card {
+	flex-direction: column-reverse;
+}

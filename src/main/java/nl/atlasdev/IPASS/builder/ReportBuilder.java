@@ -17,6 +17,8 @@ public class ReportBuilder {
 	public String comment;
 	public ArrayList<Answer> answers;
 
+	public ReportBuilder() { }
+
 	public ReportBuilder(int id) {
 		this.id = id;
 	}

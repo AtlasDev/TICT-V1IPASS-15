@@ -39,6 +39,26 @@ public class Report {
 		return this.id;
 	}
 
+	public int getTargetId() {
+		return this.targetId;
+	}
+
+	public int getCreatorId() {
+		return this.creatorId;
+	}
+
+	public Date getCreatedAt() {
+		return this.createdAt;
+	}
+
+	public Date getUpdatedAt() {
+		return this.updatedAt;
+	}
+
+	public String getComment() {
+		return this.comment;
+	}
+
 	public void populate() throws SQLException {
 		MemberDAO memberDAO = new MemberDAO();
 		if(this.creator == null) this.creator = memberDAO.findById(this.creatorId);

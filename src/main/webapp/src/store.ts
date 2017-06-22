@@ -38,6 +38,7 @@ export default new Vuex.Store({
     setIndicators: (state, newState) => state.indicators = newState,
     setUnstrucIndicators: (state, newState) => state.unStrucIndicators = newState,
     setReports: (state, newState) => state.reports = newState,
+    addReport: (state, newState) => state.reports.push(newState),
 		showDialog: (state, newState) => state.dialog = newState,
 		deleteReport: (state, reportId) => state.reports = state.reports.filter((report) => report.id !== reportId),
     loginUser: (state, user) => {

@@ -32,15 +32,15 @@
 		</div>
 		<div class="mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-12-phone mdc-card card">
 			<section class="mdc-card__supporting-text">
-				<canvas id="inspectReportRatioChart" width="400" height="400"></canvas>
+				<canvas id="inspectReportRatioChart"></canvas>
 			</section>
 			<section class="mdc-card__primary">
-		    <h1 class="mdc-card__title mdc-card__title--large">Goedkeuring vragen</h1>
+		    <h1 class="mdc-card__title mdc-card__title--large">Score vragen</h1>
 		  </section>
 		</div>
 		<div class="mdc-layout-grid__cell--span-3 mdc-layout-grid__cell--span-12-phone mdc-card card">
 			<section class="mdc-card__supporting-text">
-				<canvas id="inspectReportBarChart" width="400" height="400"></canvas>
+				<canvas id="inspectReportBarChart"></canvas>
 			</section>
 			<section class="mdc-card__primary">
 		    <h1 class="mdc-card__title mdc-card__title--large">Goedkeuring vragen per sectie</h1>

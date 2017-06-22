@@ -28,13 +28,13 @@
 									class="mdc-button mdc-button--compact mdc-button--dense material-icons link"
 									:to="{ name: 'Bekijken Raport', params: { reportId: report.id }}"
 									title="Bekijken Raport">
-									supervisor_account
+									folder_open
 			          </router-link>
-								<button
+								<!-- <button
 									class="mdc-button mdc-button--compact mdc-button--dense material-icons link"
 									title="Aanpassen">
 									mode_edit
-								</button>
+								</button> -->
 								<button
 									class="mdc-button mdc-button--compact mdc-button--dense material-icons link"
 									title="Verwijderen"
@@ -50,6 +50,14 @@
 				</section>
 			</div>
     </div>
+		<router-link
+			class="mdc-fab float-bottom"
+			to="/report/add"
+			title="Maak rapport">
+			<span class="mdc-fab__icon">
+				<i class="material-icons">create_new_folder</i>
+			</span>
+		</router-link>
 	</div>
 </template>
 
