@@ -1,9 +1,9 @@
 const cacheUrls = [
-	'.',
+	'/index.html',
 	'/dist/index.js',
+	'/static/logo-512.png',
 ];
 
-console.log('asdsad');
 self.addEventListener('install', (event: any) => {
 	console.log('Service worker has been installed.');
 	event.waitUntil(
