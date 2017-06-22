@@ -3,5 +3,4 @@ node_modules
 .project
 /.settings/
 .classpath
-dist
 package-lock.json
