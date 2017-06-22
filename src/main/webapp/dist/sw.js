@@ -72,10 +72,10 @@
 /***/ (function(module, exports) {
 
 const cacheUrls = [
-    '.',
+    '/index.html',
     '/dist/index.js',
+    '/static/logo-512.png',
 ];
-console.log('asdsad');
 self.addEventListener('install', (event) => {
     console.log('Service worker has been installed.');
     event.waitUntil(caches.open('static-v1').then((cache) => {
